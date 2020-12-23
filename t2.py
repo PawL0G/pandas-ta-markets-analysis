@@ -16,7 +16,7 @@ import yfinance as yf
 
 class StrategyRSIMACD:
 
-    def __init__(self):
+    def __init__(self, rsiSell, rsiBuy, rsiEntry, **kwargs):
         # self.ta = self.ta
         self.name = self.name
         self.data = self.data
@@ -24,9 +24,9 @@ class StrategyRSIMACD:
         self.value = self.value
         self.close = self.close
 
-        self.rsiBuy = self.rsiSell
-        self.rsiSell = self.rsiSell
-        self.rsiEntry = self.rsiEntry(int)
+        self.rsiBuy = rsiBuy
+        self.rsiSell = rsiSell
+        self.rsiEntry = rsiEntry(int)
         self.writeCatalog = self.writeCatalog
         self.loadBar = self.loadBar
         self.initDays = self.initDays
